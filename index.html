@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madugundu Mahendra — Futuristic Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+    <!-- Slide Indicators -->
+    <nav id="slide-indicators" aria-label="Slide navigation">
+      <ul>
+        <li data-target="0" aria-label="Hero" aria-current="true"></li>
+        <li data-target="1" aria-label="About Me"></li>
+        <li data-target="2" aria-label="Skills"></li>
+        <li data-target="3" aria-label="Experience"></li>
+        <li data-target="4" aria-label="Education"></li>
+        <li data-target="5" aria-label="Projects"></li>
+        <li data-target="6" aria-label="Contact"></li>
+      </ul>
+    </nav>
+
+    <!-- Prev/Next Controls -->
+    <button id="prev-btn" class="nav-btn" aria-label="Previous section">⟵</button>
+    <button id="next-btn" class="nav-btn" aria-label="Next section">⟶</button>
+
+    <main id="app" role="main">
+      <div class="slides" id="slides">
+        <!-- Hero -->
+        <section id="hero" class="slide active" data-title="Hero">
+          <div class="content">
+            <img class="avatar" src="mahendra.jpg" alt="Portrait of Madugundu Mahendra" />
+            <h1 class="name">
+              <span class="typewriter" id="typewriter-name" data-text="Madugundu Mahendra">Madugundu Mahendra</span>
+            </h1>
+            <p class="tagline">Full-Stack Developer • Systems Thinker • Problem Solver</p>
+            <div class="cta">
+              <a class="btn primary" href="assets/Madugundu_Mahendra_Resume.pdf" download>Download Resume</a>
+              <a class="btn ghost" href="#contact">Contact Me</a>
+            </div>
+            <div class="contact-mini">
+              <a href="mailto:mahendra630393@gmail.com">mahendra630393@gmail.com</a>
+              <span>·</span>
+              <a href="tel:+916303931293">+91 6303931293</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="slide" data-title="About Me">
+          <div class="content">
+            <h2>About Me</h2>
+            <p>
+              I build fast, reliable web applications with a focus on clean architecture,
+              delightful user experiences, and measurable impact. I enjoy shipping
+              features end-to-end, from pixel-perfect UI to scalable backend services.
+            </p>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="slide" data-title="Skills">
+          <div class="content">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+              <div class="skill">
+                <span>HTML / CSS / JS</span>
+                <div class="bar"><i style="width: 95%"></i></div>
+              </div>
+              <div class="skill">
+                <span>React / Next.js</span>
+                <div class="bar"><i style="width: 90%"></i></div>
+              </div>
+              <div class="skill">
+                <span>Node.js / Express</span>
+                <div class="bar"><i style="width: 88%"></i></div>
+              </div>
+              <div class="skill">
+                <span>TypeScript</span>
+                <div class="bar"><i style="width: 85%"></i></div>
+              </div>
+              <div class="skill">
+                <span>Databases (Postgres/Mongo)</span>
+                <div class="bar"><i style="width: 80%"></i></div>
+              </div>
+              <div class="skill">
+                <span>DevOps / CI</span>
+                <div class="bar"><i style="width: 70%"></i></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="slide" data-title="Experience">
+          <div class="content">
+            <h2>Experience</h2>
+            <div class="timeline">
+              <article class="item">
+                <h3>Full-Stack Developer</h3>
+                <span class="meta">Company • 2022 – Present</span>
+                <p>Built and maintained modern web apps, improved performance, and led key releases.</p>
+              </article>
+              <article class="item">
+                <h3>Frontend Developer</h3>
+                <span class="meta">Company • 2020 – 2022</span>
+                <p>Delivered responsive interfaces, accessibility improvements, and design systems.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="slide" data-title="Education">
+          <div class="content">
+            <h2>Education</h2>
+            <ul class="edu">
+              <li>
+                <strong>Bachelor of Technology</strong>
+                <span>St. Johns College of Engineering and Technology, Yerrakota, Yemmiganur, Andhra Pradesh</span>
+                <span>Percentage: 70%</span>
+              </li>
+              <li>
+                <strong>Intermediate</strong>
+                <span>Deeksha Junior College, Geetha Mandir, Yemmiganur, Andhra Pradesh</span>
+                <span>Percentage: 59%</span>
+              </li>
+              <li>
+                <strong>SSC</strong>
+                <span>Sree Saraswathi Vidyanikethan High School, Yemmiganur, Andhra Pradesh</span>
+                <span>Percentage: 80%</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="slide" data-title="Projects">
+          <div class="content">
+            <h2>Projects</h2>
+            <div class="projects">
+              <a class="card" href="#" target="_blank" rel="noopener">
+                <h3>Project Alpha</h3>
+                <p>Real-time dashboard with WebSockets, charts, and alerts.</p>
+              </a>
+              <a class="card" href="#" target="_blank" rel="noopener">
+                <h3>Project Beta</h3>
+                <p>SEO-friendly Next.js site with CMS integration and caching.</p>
+              </a>
+              <a class="card" href="#" target="_blank" rel="noopener">
+                <h3>Project Gamma</h3>
+                <p>Mobile-first PWA with offline sync and fast startup.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="slide" data-title="Contact">
+          <div class="content">
+            <h2>Contact</h2>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:mahendra630393@gmail.com">mahendra630393@gmail.com</a>
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:+916303931293">+91 6303931293</a>
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="assets/Madugundu_Mahendra_Resume.pdf" download>Download Resume</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
